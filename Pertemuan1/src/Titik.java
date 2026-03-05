@@ -17,6 +17,12 @@ public class Titik {
         ordinat = 0;
     }
 
+    // Konstruktor untuk membuat titik dengan koordinat (x, y)
+    Titik(double x, double y) {
+        absis = x;
+        ordinat = y;
+    }
+
     // Mengembalikan nilai absis
     double getAbsis() {
         return absis;
@@ -47,4 +53,49 @@ public class Titik {
     void printTitik() {
         System.out.println("Titik (" + absis + "," + ordinat + ")");
     }
-} // end class Titik
+
+    // Mengembalikan jarak titik dari pusat koordinat
+    public double getJarakPusat(){
+        return Math.sqrt((absis * absis) + (ordinat * ordinat));
+    }
+
+    // Mengembalikan jarak titik dari titik t
+    public double getJarak(Titik t) {
+        return Math.sqrt(((this.absis - this.getAbsis()) * (this.absis - this.getAbsis())) + ((this.ordinat - this.getOrdinat()) * (this.ordinat - this.getOrdinat())));
+    }
+
+    // Mengembalikan titik hasil refleksi terhadap sumbu X
+    public void refleksiX (){
+        ordinat = -1;
+    }
+
+    // Mengembalikan titik hasil refleksi terhadap sumbu Y
+    public void refleksiY (){
+        absis = -1;
+    }
+
+    // Mengembalikan titik hasil refleksi terhadap titik pusat (0,0)
+    public Titik getRefleksiX (){
+        return new Titik(absis, this.ordinat * -1);
+    }
+
+    // Mengembalikan titik hasil refleksi terhadap titik pusat (0,0)
+    public Titik getRefleksiY (){
+        return new Titik(this.absis * -1, ordinat);
+    }
+
+    // Mengembalikan titik hasil refleksi terhadap titik pusat
+    public int getKuadran() {
+        if (this.absis > 0 && this.ordinat > 0) {
+            return 1;
+        } else if (this.absis < 0 && this.ordinat > 0) {
+            return 2;
+        } else if (this.absis < 0 && this.ordinat < 0) {
+            return 3;
+        } else if (this.absis > 0 && this.ordinat < 0) {
+            return 4;
+        } else {
+            return 0; 
+        }
+    }
+}

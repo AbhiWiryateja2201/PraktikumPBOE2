@@ -104,3 +104,5 @@ public class App {
         System.out.println("Jumlah Mata Kuliah yang Lulus:\n" + jumlahLulus + " dari " + nilaiUjian.length);
     }
 }
+
+     
