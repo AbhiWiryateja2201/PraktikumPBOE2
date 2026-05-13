@@ -3,6 +3,7 @@
 // Nama         : Anintya Abhi Wiryateja
 // Tanggal      : 2 Mei 2026
 
+package Piaraan;
 public class Kucing extends Anabul {
     protected double bobot;
 

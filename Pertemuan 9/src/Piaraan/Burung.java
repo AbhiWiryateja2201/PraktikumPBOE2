@@ -4,7 +4,7 @@
 */
 
 
-// 3. Realisasi subkelas Burung
+package Piaraan;
 public class Burung extends Anabul {
     public Burung(String nama) {
         super(nama);

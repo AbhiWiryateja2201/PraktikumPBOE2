@@ -4,7 +4,7 @@
 */
 
 
-// 3. Realisasi subkelas Anjing
+package Piaraan;
 public class Anjing extends Anabul {
     public Anjing(String nama) {
         super(nama);

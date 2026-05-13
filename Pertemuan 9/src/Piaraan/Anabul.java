@@ -3,6 +3,8 @@
 // Nama         : Anintya Abhi Wiryateja
 // Tanggal      : 2 Mei 2026
 
+package Piaraan;
+
 public abstract class Anabul {
     private String nama;
 

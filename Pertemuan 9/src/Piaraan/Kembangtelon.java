@@ -3,6 +3,7 @@
 // Nama         : Anintya Abhi Wiryateja
 // Tanggal      : 2 Mei 2026
 
+package Piaraan;
 public class Kembangtelon extends Kucing {
     public Kembangtelon(String nama, double bobot) {
         super(nama, bobot);
